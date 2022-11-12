@@ -1,6 +1,7 @@
 from django.shortcuts import render ,redirect
 from .forms import CreateUser
 from django.contrib.auth import authenticate, login as auth_login
+from Assets.models import Assets , AssetAssign
 # Create your views here.
 from django.views.decorators.csrf import csrf_exempt
 def home(request):
@@ -33,4 +34,6 @@ def login(request):
             
     return render(request, 'login.html')
 def assets(request):
-    return render(request, 'asset.html')
+    assets = AssetAssign.objects.all()
+    context = {'assets':assets}
+    return render(request, 'asset.html', context)

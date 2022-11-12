@@ -15,87 +15,27 @@
         <table class="tg">
         <thead>
           <tr>
-            <th class="tg-0pky"></th>
-            <th class="tg-0pky"></th>
-            <th class="tg-0pky"></th>
-            <th class="tg-0pky"></th>
-            <th class="tg-0pky"></th>
-            <th class="tg-0pky"></th>
+            <th class="tg-0pky">Name</th>
+            <th class="tg-0pky">Department</th>
+            <th class="tg-0pky">Device</th>
+            <th class="tg-0pky">Type</th>
+            <th class="tg-0pky">Assign Date</th>
+            <th class="tg-0pky">Return Date</th>
+            <th class="tg-0pky">Asset Log</th>
           </tr>
         </thead>
         <tbody>
+          {% for a in assets%}
           <tr>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
+            <td class="tg-0pky">{{a.emp_id.name}}</td>
+            <td class="tg-0pky">{{a.emp_id.department}}</td>
+            <td class="tg-0pky">{{a.asset_id}}</td>
+            <td class="tg-0pky">{{a.asset_id.asset_type}}</td>
+            <td class="tg-0pky">{{a.asset_assign_date}}</td>
+            <td class="tg-0pky">{{a.asset_return_date}}</td>
+            <td class="tg-0pky">{{a.asset_log}}</td>
           </tr>
-          <tr>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-          </tr>
-          <tr>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-          </tr>
-          <tr>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-          </tr>
-          <tr>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-          </tr>
-          <tr>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-          </tr>
-          <tr>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-          </tr>
-          <tr>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-          </tr>
-          <tr>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-            <td class="tg-0pky"></td>
-          </tr>
+         {%endfor%} 
         </tbody>
         </table>
 </body>
