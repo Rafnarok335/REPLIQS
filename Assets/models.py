@@ -1,20 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from Company.models import Employee
 # Create your models here.
-class Employess(models.Model):
-    emp_id = models.IntegerField(primary_key=True)
-    emp_name = models.ForeignKey(User, on_delete=models.CASCADE, max_length=30)
-    emp_email = models.EmailField(max_length=30)
-    emp_address = models.CharField(max_length=30)
-    emp_salary = models.IntegerField()
-    emp_dob = models.DateField()
-    Phone = models.DecimalField(("Phone Number"), max_digits=11, decimal_places=0)
-    Joinnig_date = models.DateField(("Joining Date"), max_length=50)
-    username = models.CharField(max_length=30)
-    def __str__(self):
 
-        return self.username  
 
 class Assets(models.Model):
     asset_id = models.IntegerField(primary_key=True)
@@ -32,7 +20,7 @@ class Assets(models.Model):
 
 class AssetAssign(models.Model):
     asset_id = models.ForeignKey(Assets, on_delete=models.CASCADE)
-    emp_id = models.ForeignKey(Employess, on_delete=models.CASCADE)
+    emp_id = models.ForeignKey(Employee, on_delete=models.CASCADE)
     asset_assign_date = models.DateField()
     asset_return_date = models.DateField()
     asset_assign_status = models.CharField(max_length=30)
