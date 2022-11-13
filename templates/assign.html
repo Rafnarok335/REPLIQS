@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	</title>
+</head>
+<body>
+    <form action="{%url 'asset_assign'%}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Name">
+        <input type="text" name="department" placeholder="Email">
+        <input type="date" name="assign_date" placeholder="Phone">
+        <input type="date" name="return_date" placeholder="Phone">
+        
+        <select name="asset">
+            {% for asset in asset %}
+                <option value="{{asset.asset_id}}">{{asset.asset_name}}</option>
+            {% endfor %} </select>
+        <input type="submit" name="submit" value="Submit">
+    </form>
+
+    <a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>

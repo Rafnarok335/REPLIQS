@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	Employee Addition</title>
+</head>
+<body>
+    
+    <form action="{% url 'addEmployee'%}" method="POST">
+       {%csrf_token %}
+        {%for field in form%}
+        <p>{{field.label_tag}} {{field}}</p>
+        {%endfor%}
+        
+        <button type="submit" value="Submit"> Submit</button>
+    </form>
+</body>
+</html>
