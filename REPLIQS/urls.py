@@ -19,7 +19,7 @@ from Company import views as company_views
 from Assets import views as assets_views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',company_views.home,name='home'),
+    path('',company_views.home,name='index'),
     path('register/',company_views.register,name='register'),
     path('login/',company_views.login,name='login'),
     path('assets/',company_views.assets,name='assets'),
