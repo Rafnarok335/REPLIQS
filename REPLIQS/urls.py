@@ -26,4 +26,5 @@ urlpatterns = [
     path('assign/',assets_views.assign,name='asset_assign'),
     path('logout/',company_views.logout,name='logout'),
     path('addEmployee/',company_views.addEmployee,name='addEmployee'),
+    path('addAsset',assets_views.addAsset,name='addAsset')
 ]

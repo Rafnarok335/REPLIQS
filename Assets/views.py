@@ -19,3 +19,20 @@ def assign(request):
         asset_assign.save()
         return redirect('assets')
     return render(request,'assign.html',context)
+
+#The view for adding asset
+def addAsset(request):
+    if request.method == "POST":
+        
+        asset_name = request.POST.get('asset_name')
+        asset_type = request.POST.get('asset_type')
+        asset_price = request.POST.get('asset_price')
+        asset_purchase_date = request.POST.get('asset_purchase_date')
+        asset_warranty = request.POST.get('asset_warranty')
+        asset_status = "Available"
+        asset_location = request.POST.get('asset_location')
+        asset_description = request.POST.get('asset_description')
+        asset = Assets(asset_name=asset_name,asset_type=asset_type,asset_price=asset_price,asset_purchase_date=asset_purchase_date,asset_warranty=asset_warranty,asset_status=asset_status,asset_location=asset_location,asset_description=asset_description)
+        asset.save()
+        return redirect('assets')
+    return render(request,'addAsset.html')

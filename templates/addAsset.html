@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	Employee Addition</title>
+</head>
+<body>
+    
+    <form action="{% url 'addAsset'%}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="asset_name" placeholder="Asset Name">
+        <input type="text" name="asset_type" placeholder="Asset Type">
+        <input type="text" name="asset_description" placeholder="Asset Description">
+        <input type="text" name="asset_price" placeholder="Asset Price">
+        <input type="date" name="asset_purchase_date" placeholder="Asset Date">
+        <input type="number" name="asset_warranty" placeholder = "Asset warranty">
+        <input type="text" name="asset_log" placeholder="Asset Log">
+        <input type="text" name="asset_location" placeholder = "Location">
+        <input type="text" name="asset_status" placeholder="Asset Status">
+        
+        <button type="submit" value="Submit"> Submit</button>
+    </form>
+</body>
+</html>
