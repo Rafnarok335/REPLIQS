@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from Company.models import Employee
 # Create your models here.
 
-
+## This is the assets model where assets are stored with respectable information
 class Assets(models.Model):
     asset_id = models.IntegerField(primary_key=True)
     asset_name = models.CharField(max_length=30)
@@ -17,7 +17,7 @@ class Assets(models.Model):
     def __str__(self):
         return self.asset_name
 
-
+# This is the Key model where assets are assigned to manager model.
 class AssetAssign(models.Model):
     asset_id = models.ForeignKey(Assets, on_delete=models.CASCADE)
     emp_id = models.ForeignKey(Employee, on_delete=models.CASCADE)

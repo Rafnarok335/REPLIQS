@@ -11,7 +11,7 @@ class User(AbstractUser):
     is_employee = models.BooleanField(default=False)
     is_manager = models.BooleanField(default=False)
 
-
+## This is the employee table where i store the employee details with the fields here. I kept field here minimum.
 class Employee(models.Model):
     emp_id = models.AutoField(primary_key=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE,related_name='employee')

@@ -2,6 +2,7 @@ from django.shortcuts import render , redirect
 from .models import Assets , AssetAssign
 from Company.models import Employee
 # Create your views here.
+#The assign view where assets are assigned to employees.
 def assign(request):
     asset = Assets.objects.filter(asset_status='Available')
     context = {'asset':asset}
